@@ -1,13 +1,16 @@
 import json
 import re
-from tqdm import trange, tqdm
+from tqdm import tqdm
+import os
 import sys
 sys.path.append('./')
 from utilities import del_http_user_tokenize, clean_str
 
 part = sys.argv[1]
+if not os.path.exists("../data/extracted"):
+    os.makedirs("../data/extracted")
 
-with open("/projects/b1131/Hanyin/Twitter/extracted/%s_clean_extracted"%(part)) as tweet_file:
+with open("../data/extracted/%s_clean_extracted"%(part)) as tweet_file:
     for line in tqdm(tweet_file):
         dic = json.loads(line)
 

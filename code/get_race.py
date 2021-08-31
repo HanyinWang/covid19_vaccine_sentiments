@@ -1,9 +1,12 @@
 import pandas as pd
+import os
 import sys
 from ethnicolr import pred_census_ln
 
 part = sys.argv[1]
 
+if not os.path.exists("../data/race"):
+    os.makedirs("../data/race")
 
 f = open('../data/cleaned/tweets_en_part%s.csv'%(part),'r')
 out = open('../data/race/census2010_race_part%s.csv'%(part), 'w+')

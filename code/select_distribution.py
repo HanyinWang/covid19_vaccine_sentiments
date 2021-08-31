@@ -1,7 +1,14 @@
 import sys
 import re
+import os
 
 part = sys.argv[1]
+
+if not os.path.exists("../data/vaccine_distribution_text"):
+    os.makedirs("../data/vaccine_distribution_text")
+
+if not os.path.exists("../data/vaccine_text_wo_distribution"):
+    os.makedirs("../data/vaccine_text_wo_distribution")
 
 distribution_regex1 = re.compile(r'\b(distribution|distributed|distributing|distribute|distributes|deliver|delivered|delivery|batch|shipments|prioritize|prioritizing|prioritizes|1a|1b|1c|eligibility|deployment)\b')
 distribution_regex2 = re.compile(r'\breceiv+?(ed\b|es\b|ing\b|e\b).*[0-9].*\bdose+?(s\b|\b)')

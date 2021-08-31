@@ -17,6 +17,9 @@ from utilities import clean_str, del_http_user_tokenize
 part = sys.argv[1]
 sentiment = sys.argv[2]
 
+if not os.path.exists("../data/topic_modeling"):
+    os.makedirs("../data/topic_modeling")
+
 vaccine_wo_dist_path = "../data/vaccine_text_wo_distribution_real_date"
 LDA_path = "../data/topic_modeling"
 

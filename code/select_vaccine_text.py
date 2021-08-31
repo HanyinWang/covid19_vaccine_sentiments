@@ -1,7 +1,11 @@
 import sys
 import re
+import os
 
 part = sys.argv[1]
+
+if not os.path.exists("../data/vaccine_text"):
+    os.makedirs("../data/vaccine_text")
 
 vaccine_regex = re.compile(r'\b(vaccine|comirnaty|pfizer\-biontech|moderna|covishield|sputnik|coronavac|bbibp\-corv|epivaccorona|convidicea|covaxin|covivac|john\&johnson|janssen|covax)\b')
 f = open('../data/full_text/full_text_en_part%s.csv'%(part),'r')

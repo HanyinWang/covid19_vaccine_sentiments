@@ -4,6 +4,9 @@ import sys
 
 part = sys.argv[1]
 
+if not os.path.exists("../data/pregnant_vaccine_text_wo_distribution"):
+    os.makedirs("../data/pregnant_vaccine_text_wo_distribution")
+
 pregnant_regex = re.compile(r'\b(pregnant|pregnancy)\b')
 in_path = '../data/vaccine_text_wo_distribution/'
 out_path = '../data/pregnant_vaccine_text_wo_distribution/'

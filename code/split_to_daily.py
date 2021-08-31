@@ -3,6 +3,9 @@ import pandas as pd
 from tqdm import tqdm
 from datetime import datetime
 
+if not os.path.exists("../data/vaccine_text_wo_distribution_real_date"):
+    os.makedirs("../data/vaccine_text_wo_distribution_real_date")
+
 vaccine_wo_dist_path = '../data/vaccine_text_wo_distribution'
 merged_foler = '../data/merged'
 vaccine_wo_dist_real_date_path = '../data/vaccine_text_wo_distribution_real_date'

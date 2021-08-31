@@ -7,7 +7,7 @@ cleaned_path = '../data/cleaned'
 race_path = '../data/race'
 age_gender_path = '../data/age_gender'
 pregnancy_path = '../data/pregnant_vaccine_text_wo_distribution'
-quote_path = '/projects/b1131/Hanyin/Twitter/quote_status'
+quote_path = '../data/quote_status'
 merged_path = '../data/merged'
 
 part = sys.argv[1]

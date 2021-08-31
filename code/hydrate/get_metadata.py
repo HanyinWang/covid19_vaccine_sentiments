@@ -21,15 +21,12 @@
 import tweepy
 import json
 import math
-import glob
 import csv
 import zipfile
-import zlib
 import argparse
 import os
 import os.path as osp
 import pandas as pd
-from tweepy import TweepError
 from time import sleep
 import sys
 

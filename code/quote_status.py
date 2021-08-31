@@ -1,10 +1,14 @@
 import json
+import os
 import sys
 sys.path.append('./')
 from utilities import del_http_user_tokenize, clean_str2
 from tqdm import tqdm
 
 part = sys.argv[1]
+
+if not os.path.exists("../data/quote_status"):
+    os.makedirs("../data/quote_status")
 
 dist_out = open('../data/vaccine_distribution_text/vaccine_distribution_text_part%s.csv' % (part), 'w+')
 wo_dist_out = open('../data/vaccine_text_wo_distribution/vaccine_text_wo_distribution_part%s.csv'%(part), 'w+')
